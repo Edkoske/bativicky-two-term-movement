@@ -20,6 +20,7 @@
         :root {
             --primary-green: #006838;
             --secondary-red: #BC2025;
+            --accent-yellow: #FFD700;
             --accent-gold: #FFB81C;
             --white: #FFFFFF;
             --light-gray: #F5F5F5;
@@ -183,14 +184,14 @@
         .mobile-menu-toggle span {
             width: 25px;
             height: 3px;
-            background: var(--primary-green);
+            background: var(--accent-yellow);
             transition: all 0.3s ease;
         }
 
         /* Hero Section */
         .hero {
             margin-top: 70px;
-            background: linear-gradient(135deg, var(--primary-green) 0%, #004d2a 100%);
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-yellow) 100%);
             color: var(--white);
             padding: 8rem 2rem;
             text-align: center;
@@ -265,21 +266,22 @@
         .cta-button {
             display: inline-block;
             padding: 1rem 3rem;
-            background: var(--white);
+            background: var(--accent-yellow);
             color: var(--primary-green);
             text-decoration: none;
             font-weight: 700;
             border-radius: 50px;
             transition: all 0.3s ease;
             animation: fadeInUp 1s ease 0.4s backwards;
-            border: 2px solid var(--white);
+            border: 2px solid var(--accent-yellow);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
         }
 
         .cta-button:hover {
-            background: transparent;
-            color: var(--white);
+            background: var(--white);
+            color: var(--primary-green);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
         }
 
         /* Section Styles */
@@ -407,7 +409,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             transition: all 0.4s ease;
             text-align: center;
-            border-top: 5px solid var(--primary-green);
+            border-top: 5px solid var(--accent-yellow);
             position: relative;
             overflow: hidden;
         }
@@ -419,7 +421,7 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, var(--primary-green), #00ff88);
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-yellow));
         }
 
         .leadership-card:hover {
@@ -433,14 +435,14 @@
             border-radius: 50%;
             overflow: hidden;
             margin: 0 auto 1.5rem;
-            border: 5px solid var(--primary-green);
-            box-shadow: 0 5px 15px rgba(0, 123, 0, 0.3);
+            border: 5px solid var(--accent-yellow);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
             transition: all 0.3s ease;
         }
 
         .leadership-image:hover {
             transform: scale(1.1);
-            box-shadow: 0 10px 25px rgba(0, 123, 0, 0.5);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
         }
 
         .leadership-image img {
@@ -456,7 +458,7 @@
 
         .leadership-card h3 {
             font-family: 'Poppins', sans-serif;
-            color: var(--primary-green);
+            color: var(--accent-yellow);
             margin-bottom: 0.5rem;
             font-size: 1.4rem;
             font-weight: 700;
@@ -469,6 +471,66 @@
             line-height: 1.6;
             font-size: 1rem;
             font-weight: 500;
+        }
+
+        /* Gallery Section */
+        .gallery-category {
+            margin-bottom: 3rem;
+        }
+
+        .gallery-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-yellow));
+            border-radius: 2px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
         }
 
         /* Why Running Section */
@@ -587,14 +649,22 @@
         .submit-button {
             width: 100%;
             padding: 1rem;
-            background: var(--primary-green);
-            color: var(--white);
-            border: none;
+            background: var(--accent-yellow);
+            color: var(--primary-green);
+            border: 2px solid var(--accent-yellow);
             border-radius: 10px;
             font-size: 1.1rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .submit-button:hover {
+            background: var(--primary-green);
+            color: var(--accent-yellow);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
         }
 
         .submit-button:hover {
@@ -796,6 +866,19 @@
             .leadership-image {
                 width: 120px;
                 height: 120px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery-item img {
+                height: 150px;
+            }
+
+            .category-title {
+                font-size: 1.3rem;
             }
 
             .engagement-grid {
