@@ -342,6 +342,23 @@
             object-fit: cover;
         }
 
+        .founder-caption {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            line-height: 1.4;
+        }
+
         .about-text h3 {
             font-family: 'Poppins', sans-serif;
             color: var(--primary-green);
@@ -540,6 +557,17 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
             transition: all 0.3s ease;
             display: block;
+        }
+
+        .gallery-caption {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: center;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+            text-transform: capitalize;
         }
 
         @media (max-width: 600px) {
