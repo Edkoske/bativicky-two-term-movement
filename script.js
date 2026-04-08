@@ -12,7 +12,7 @@
 
         // Default configuration for editable features
         const defaultConfig = {
-            hero_headline: "TUTAM Movement",
+            hero_headline: "TUTAM FORCES MOVEMENT",
             hero_subtitle: "Future in Motion, Singapore Express. Uniting Kenya, Empowering Citizens, Building Future Leaders. Join the grassroots political movement founded by Bati Vicky to support President Ruto's vision and build a stronger Kenya.",
             cta_button_text: "Join the Movement",
             about_heading: "Who We Are",
