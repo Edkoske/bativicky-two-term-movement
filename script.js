@@ -313,4 +313,25 @@
             });
         }
 
+        // Randomize launch images functionality
+        const randomizeButton = document.getElementById('randomizeLaunchImages');
+        const galleryGrid = document.querySelector('.launch-images .gallery-grid');
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        if (randomizeButton && galleryGrid) {
+            randomizeButton.addEventListener('click', () => {
+                const items = Array.from(galleryGrid.children);
+                const shuffledItems = shuffleArray(items);
+                galleryGrid.innerHTML = '';
+                shuffledItems.forEach(item => galleryGrid.appendChild(item));
+            });
+        }
+
  (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9af335bf669b8a61',t:'MTc2NTk0MDg0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
